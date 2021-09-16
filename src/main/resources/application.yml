@@ -11,4 +11,7 @@ spring:
    port: 465
 server:
   port: 8080
-
+logging:
+  file:
+    # 注意配置
+    path: C:/Users/R720/Desktop/

@@ -35,6 +35,7 @@ public class EmailServiceImpl implements EmailService {
      */
     @Override
     public void sendSimpleMail(String from, String to, String subject, String content) {
+        logger.info("简单邮件开始编辑");
         //创建SimpleMailMessage对象
         SimpleMailMessage message = new SimpleMailMessage();
         //邮件发送人
@@ -45,9 +46,10 @@ public class EmailServiceImpl implements EmailService {
         message.setSubject(subject);
         //邮件内容
         message.setText(content);
+        logger.info("开始发送简单邮件");
         //发送邮件
         mailSender.send(message);
-
+        logger.info("简单邮件发送完毕");
     }
 
     /**
@@ -59,7 +61,7 @@ public class EmailServiceImpl implements EmailService {
      */
     @Override
     public void sendHtmlMail(String from, String to, String subject, String content) {
-
+        logger.info("开始编辑html邮件");
 
 //        获取MimeMessage对象
         MimeMessage message = mailSender.createMimeMessage();
@@ -74,10 +76,11 @@ public class EmailServiceImpl implements EmailService {
             message.setSubject(subject);
             //邮件内容，html格式
             messageHelper.setText(content, true);
+            logger.info("开始发送HTML邮件");
             //发送
             mailSender.send(message);
 
-
+            logger.info("HTML邮件发送完毕");
             //日志信息
             logger.info("邮件已经发送。");
         } catch (MessagingException e) {
@@ -108,10 +111,6 @@ public class EmailServiceImpl implements EmailService {
             String fileName = filePath.substring(filePath.lastIndexOf(File.separator));
             helper.addAttachment(fileName, file);
             mailSender.send(message);
-
-
-            //日志信息
-            logger.info("邮件已经发送。");
         } catch (MessagingException e) {
             logger.error("发送邮件时发生异常！", e);
         }
