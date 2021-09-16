@@ -1,0 +1,14 @@
+spring:
+#邮箱设置
+ mail:
+   host: smtp.qq.com
+   username: 1822649761@qq.com
+   #邮箱授权码
+   password: mqhglgsshrwodjje
+   default-encoding: UTF-8
+   form: 1822649761@qq.com
+   protocol: smtp
+   port: 25
+server:
+  port: 8080
+
