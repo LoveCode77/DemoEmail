@@ -11,3 +11,6 @@ https://blog.csdn.net/SixthMagnitude/article/details/114173570
 Couldn‘t connect to host, port: smtp.qq.com, 25； timeout -1；
 ```
 https://blog.csdn.net/qq_45193304/article/details/112853519
+```aidl
+
+```
