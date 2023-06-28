@@ -15,7 +15,8 @@ public class EmailTestController {
     @Value ("${spring.mail.username}")
     private String from;
 
-    //localhost:8080/emailTest/simpleEmail?receive=1435295017@qq.com&subject="我爱盼盼"&content="真的太爱了！"
+    //localhost:8080/emailTest/simpleEmail?receive=1435295017@qq.com&subject="demo"&content="demo！"
+    //localhost:8080/emailTest/simpleEmail?receive=193504365@qq.com&subject="验证码"&content="你的验证码是3286！"
     @RequestMapping("simpleEmail")
     public String sendSimple(String receive,String subject,String content){
 

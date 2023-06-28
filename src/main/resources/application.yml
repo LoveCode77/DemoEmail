@@ -4,14 +4,17 @@ spring:
    host: smtp.qq.com
    username: 1822649761@qq.com
    #邮箱授权码
-   password: mqhglgsshrwodjje
+#   password: mqhglgsshrwodjje
+   password: gvfqsnvzwapxfdci
    default-encoding: UTF-8
    form: 1822649761@qq.com
    protocol: smtps
    port: 465
+
 server:
   port: 8080
 logging:
   file:
     # 注意配置
-    path: C:/Users/R720/Desktop/
+#    path: C:/Users/R720/Desktop/
+    path: /log/
